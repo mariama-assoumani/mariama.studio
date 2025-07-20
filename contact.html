@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Mariama Assoumani</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+    <script
+      src="https://kit.fontawesome.com/ba57058827.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+  </head>
+  <body class="contact" data-barba="wrapper">
+    <div class="load-container">
+      <div class="loading-screen"></div>
+    </div>
+
+    <main data-barba="container" data-barba-namespace="contact-section">
+      <!-- Grain -->
+      <div class="grain-overlay"></div>
+      <div id="custom-cursor">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12.178 5.52271C12.3796 5.55654 12.55 5.68731 12.6389 5.86646L12.677 5.95923L12.9241 6.73462C13.4882 8.44503 13.9657 9.47893 14.6116 10.1526C15.3282 10.9 16.2974 11.2457 18.0305 11.4856C18.2833 11.5206 18.4866 11.7375 18.4866 12.0071C18.4864 12.2531 18.3154 12.46 18.0852 12.5168C16.3344 12.9484 15.0795 13.4975 14.2141 14.3254C13.3593 15.1433 12.8442 16.2731 12.6555 17.9543C12.6225 18.2484 12.3747 18.4864 12.0647 18.4866C11.7637 18.4866 11.5175 18.2617 11.4758 17.9749C11.2277 16.266 10.7322 15.0446 9.88892 14.1936C9.04745 13.3445 7.81122 12.8147 5.97681 12.595C5.75269 12.5681 5.56661 12.399 5.52368 12.175L5.51392 12.0764L5.52173 11.9846C5.55892 11.7763 5.72068 11.6121 5.92407 11.5667L6.60571 11.4094C8.10874 11.0455 9.02335 10.6922 9.68774 10.0549C10.4467 9.32687 10.9291 8.17697 11.4612 5.99829L11.4954 5.89771C11.5923 5.67285 11.815 5.51392 12.0745 5.51392L12.178 5.52271Z"
+            fill="#FAAD9C"
+            stroke="#F2917B"
+            stroke-width="0.75"
+            stroke-linejoin="round"
+            class="cursor-main"
+          />
+          <path
+            d="M12.1338 0.625C12.5039 0.625003 12.8246 0.872006 12.9316 1.21582C14.1514 5.1375 15.1008 7.43784 16.4854 8.88184C17.8484 10.3034 19.6784 10.9381 22.8135 11.3721C23.1258 11.4153 23.3749 11.6821 23.375 12.0117C23.375 12.3135 23.1651 12.5696 22.8809 12.6396C19.7111 13.4209 17.3923 14.4256 15.7783 15.9697C14.1749 17.5038 13.2268 19.6103 12.8818 22.6846C12.8388 23.0678 12.5159 23.3748 12.1162 23.375C11.728 23.375 11.4078 23.0851 11.3535 22.7119C10.9023 19.6037 9.99522 17.332 8.41406 15.7363C6.83463 14.1425 4.53391 13.1735 1.19336 12.7734C0.91746 12.7404 0.689543 12.5322 0.636719 12.2588L0.625 12.1377L0.634766 12.0254C0.680337 11.7708 0.878403 11.5686 1.12891 11.5127L2.35645 11.2285C5.07326 10.5714 6.79014 9.92035 8.0459 8.71582C9.48079 7.33939 10.3643 5.19004 11.3223 1.26758C11.4121 0.899671 11.7431 0.625 12.1338 0.625Z"
+            fill="#FAAD9C"
+            stroke="#F2917B"
+            stroke-width="0.75"
+            stroke-linejoin="round"
+            class="cursor-bg"
+          />
+        </svg>
+      </div>
+
+      <!-- Animation -->
+      <section id="up"></section>
+      <section id="down"></section>
+      <section id="left"></section>
+      <section id="right"></section>
+      <section id="corner"></section>
+      <section id="side"></section>
+      <section id="around"></section>
+
+      <!-- Barre de navigation -->
+      <nav class="menu">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/icons/logo.png" alt="Logo" width="100" />
+          </a>
+        </div>
+        <button class="burger" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li>
+            <a href="projets.html"><span class="star_2">✦</span> Projets</a>
+          </li>
+          <li>
+            <a href="propos.html"><span class="star_2">✦</span> À propos</a>
+          </li>
+          <li>
+            <a href="contact.html" class="active"
+              ><span class="star_2">✦</span> Contact</a
+            >
+          </li>
+          <button>CV</button>
+          <li><a href="anglais.html">EN</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contenu droite et gauche -->
+      <div class="container-contact">
+        <div class="left">
+          <div class="line">
+            <h1><span class="star">✧</span> Discutons !</h1>
+          </div>
+          <div class="media-stack">
+            <video
+              src="assets/videos/selfie.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              class="selfie-video"
+            ></video>
+            <img
+              src="assets/images/selfie.png"
+              alt="Portrait"
+              class="selfie-img"
+            />
+          </div>
+          <p class="text-contact">
+            J’ai 23 ans, l’esprit ouvert, créative, curieuse et profondément
+            emphatique. Disponible et motivée, je serai ravie d’échanger.
+          </p>
+        </div>
+
+        <div class="right">
+          <div class="line">
+            <p>
+              <img
+                src="assets/icons/map.svg"
+                alt=""
+                style="width: 30px; margin-bottom: -5px; margin-right: 10px"
+              />Localisation<br /><span
+                >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Europe</span
+              >
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <img
+                src="assets/icons/phone.svg"
+                alt=""
+                style="width: 30px; margin-bottom: -5px; margin-right: 10px"
+              />Téléphone<br /><span
+                >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp +339 53 57 50 21</span
+              >
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <img
+                src="assets/icons/mail.svg"
+                alt=""
+                style="width: 30px; margin-bottom: -5px; margin-right: 10px"
+              />Mail<br /><span
+                >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="mailto:asssmariama@gmail.com" style="cursor: pointer"
+                  >✧ asssmariama@gmail.com</a
+                ></span
+              >
+            </p>
+          </div>
+          <div class="line">
+            <p>
+              <img
+                src="assets/icons/social.svg"
+                alt=""
+                style="width: 30px; margin-bottom: -5px; margin-right: 10px"
+              />Réseaux<br /><a
+                href="https://www.linkedin.com/in/mariama-assoumani-085a94216"
+                target="_blank"
+                rel="noopener"
+                ><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ✧ LinkedIn</span></a
+              ><br /><a
+                href="https://www.behance.net/mariamaassouma"
+                target="_blank"
+                rel="noopener"
+                ><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ✧ Behance</span></a
+              ><br /><a
+                href="https://www.instagram.com/azalee_cafe/"
+                target="_blank"
+                rel="noopener"
+                ><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ✧ Instagram</span></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
