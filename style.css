@@ -900,8 +900,8 @@ body.contact {
     flex-direction: column;
   }
 
-  .left {
-    font-size: 20px;
+  .left h1 {
+    font-size: 13px;
   }
 
   .left p {
