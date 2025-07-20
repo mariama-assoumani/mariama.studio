@@ -752,7 +752,7 @@ body.propos {
   }
 
   .hero-copy p span {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .txt-line {
@@ -1355,7 +1355,7 @@ body.images {
   z-index: 2;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .video-timeline {
     height: 100px;
   }
