@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mariama-assoumani.github.io/mariama.studio/sitemap.xml
