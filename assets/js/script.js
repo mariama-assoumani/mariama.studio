@@ -356,36 +356,6 @@ function proposAnimations() {
   let currentX = 0,
     currentY = 0;
 
-  const basePath = "../assets/images/preview/";
-  const videoIndexes = [1, 4, 7]; // Les index (1-based) où tu veux une vidéo
-
-  items.forEach((item, index) => {
-    if (videoIndexes.includes(index + 1)) {
-      // Ajoute une vidéo
-      let video = document.createElement("video");
-      video.src = basePath + "preview" + (index + 1) + ".mp4";
-      video.autoplay = true;
-      video.loop = true;
-      video.muted = true;
-      video.playsInline = true;
-      video.style.objectFit = "contain";
-      video.style.width = "100px";
-      video.style.height = "70px";
-      video.style.borderRadius = "5px";
-      video.style.overflow = "hidden";
-      item.appendChild(video);
-    } else {
-      // Ajoute une image
-      let img = document.createElement("img");
-      img.src = basePath + "preview" + (index + 1) + ".jpg";
-      img.alt = "Image " + (index + 1);
-      img.style.objectFit = "contain";
-      img.style.width = "100px";
-      img.style.height = "70px";
-      img.style.borderRadius = "5px";
-      item.appendChild(img);
-    }
-  });
   const updateGallery = (mouseX, mouseY, show = true) => {
     targetX = mouseX - container.getBoundingClientRect().left;
     targetY = mouseY - container.getBoundingClientRect().top;
