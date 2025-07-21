@@ -24,7 +24,7 @@ function lerp(start, end, factor) {
 }
 
 function updateDimensions() {
-  isHorizontal = window.innerWidth <= 900;
+  isHorizontal = window.innerWidth <= 940;
   if (isHorizontal) {
     dimensions = {
       itemSize: itemElements[0].getBoundingClientRect().width,
