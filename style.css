@@ -1182,6 +1182,10 @@ body.images {
     margin-top: 0px;
   }
 
+  .site-info p {
+    font-size: 10px;
+  }
+
   .mindmap {
     top: auto;
     right: auto;
