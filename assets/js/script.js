@@ -37,12 +37,41 @@ function baseAnimations() {
     ease: "power4.out",
   });
 
+  gsap.from(".arrow_star", {
+    duration: 2.8,
+    opacity: 0,
+    delay: 2,
+    ease: "power4.out",
+  });
+
+  // Animation texte d'introduction
+  gsap.from(".txt-line p", {
+    duration: 1.8,
+    y: 200,
+    skewY: 10,
+    opacity: 0,
+    stagger: { amount: 0.5 },
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".introduction", // ou la section contenant l’intro
+      start: "top 70%", // adapte selon l’effet voulu
+      toggleActions: "play none none none",
+      markers: false,
+    },
+  });
+
   // Animation des icônes sociales
   gsap.from(".social-icons", {
     duration: 1.8,
-    y: 100,
+    opacity: 0,
     delay: 2,
     ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".introduction", // ou la section contenant l’intro
+      start: "top 70%", // adapte selon l’effet voulu
+      toggleActions: "play none none none",
+      markers: false,
+    },
   });
 
   // Animation de Typed.js
@@ -51,7 +80,7 @@ function baseAnimations() {
 
   if (document.querySelector(".custom-font-italic")) {
     new Typed(".custom-font-italic", {
-      strings: ["marketing digital.", "design UI.", "design UX."],
+      strings: ["des expériences.", "des interfaces.", "du sens."],
       typeSpeed: 40,
       backSpeed: 40,
       loop: true,
