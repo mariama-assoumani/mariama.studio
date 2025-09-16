@@ -45,7 +45,7 @@ function baseAnimations() {
   });
 
   // Animation texte d'introduction
-  gsap.from(".txt-line p", {
+  gsap.from(".introduction .txt-line p", {
     duration: 1.8,
     y: 200,
     skewY: 10,
