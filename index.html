@@ -28,7 +28,14 @@
     <title>UX/UI Designer - Mariama Assoumani</title>
     <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
     <link rel="preload" as="image" href="assets/images/home/mariama.webp" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
       defer
@@ -49,11 +56,6 @@
       src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"
       defer
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/InertiaPlugin.min.js"
-      defer
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
     <script src="https://unpkg.com/@barba/core" defer></script>
   </head>
   <body class="accueil" data-barba="wrapper">
@@ -68,10 +70,6 @@
       <section id="up"></section>
       <section id="down"></section>
       <section id="left"></section>
-      <section id="right"></section>
-      <section id="corner"></section>
-      <section id="side"></section>
-      <section id="around"></section>
 
       <!-- Barre de navigation -->
       <nav class="menu">

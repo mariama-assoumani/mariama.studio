@@ -500,7 +500,7 @@ function contentAnimation() {
   }
 }
 
-$(function () {
+document.addEventListener("DOMContentLoaded", () => {
   barba.init({
     sync: true,
     transitions: [
@@ -511,11 +511,9 @@ $(function () {
           await delay(1500);
           done();
         },
-
         async enter(data) {
           contentAnimation();
         },
-
         async once(data) {
           contentAnimation();
         },

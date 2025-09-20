@@ -68,13 +68,10 @@ main {
 /* Animations */
 #up,
 #down,
-#left,
-#corner,
-#around,
-#right {
+#left {
   position: absolute;
   border-radius: 50%;
-  filter: blur(200px);
+  filter: blur(2px);
   animation: 10s infinite;
 }
 
@@ -85,30 +82,6 @@ main {
     80deg,
     rgba(222, 232, 255, 1),
     rgba(182, 209, 254, 1)
-  );
-  animation-name: down;
-}
-
-#up {
-  height: 800px;
-  width: 800px;
-  background-image: linear-gradient(
-    80deg,
-    rgba(222, 232, 255, 1),
-    rgba(182, 209, 254, 1)
-  );
-  animation-name: down;
-}
-
-#around {
-  right: -400px;
-  top: -400px;
-  height: 500px;
-  width: 500px;
-  background-image: linear-gradient(
-    80deg,
-    rgb(249, 241, 234),
-    rgb(246, 188, 113)
   );
   animation-name: down;
 }
@@ -134,28 +107,6 @@ main {
     rgba(240, 151, 131, 1)
   );
   animation-name: left;
-}
-
-#left {
-  height: 400px;
-  width: 400px;
-  background-image: linear-gradient(
-    80deg,
-    rgba(209, 190, 237, 1),
-    rgba(192, 177, 210, 1)
-  );
-  animation-name: corner;
-}
-
-#right {
-  height: 500px;
-  width: 500px;
-  background-image: linear-gradient(
-    80deg,
-    rgba(222, 232, 255, 0.75),
-    rgba(182, 209, 254, 0.75)
-  );
-  animation-name: right;
 }
 
 /* Barre de navigation */
@@ -406,17 +357,6 @@ a:hover {
   }
 }
 
-@keyframes corner {
-  0%,
-  100% {
-    left: -100px;
-  }
-  70% {
-    left: 600px;
-    opacity: 0;
-  }
-}
-
 @keyframes left {
   0%,
   100% {
@@ -424,27 +364,6 @@ a:hover {
   }
   70% {
     left: 1300px;
-  }
-}
-
-@keyframes right {
-  0%,
-  100% {
-    top: -100px;
-  }
-  70% {
-    top: 1300px;
-  }
-}
-
-@keyframes around {
-  0%,
-  100% {
-    right: -100px;
-  }
-  70% {
-    right: 600px;
-    opacity: 0;
   }
 }
 
