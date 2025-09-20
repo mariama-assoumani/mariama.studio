@@ -71,7 +71,7 @@ main {
 #left {
   position: absolute;
   border-radius: 50%;
-  filter: blur(2px);
+  filter: blur(200px);
   animation: 10s infinite;
 }
 
