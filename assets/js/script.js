@@ -37,6 +37,48 @@ function baseAnimations() {
     ease: "power4.out",
   });
 
+  // Animation des liens de navigation
+  // Menu burger mobile
+  const burger = document.querySelector(".burger");
+  const navList = document.querySelector(".nav-list");
+
+  if (burger && navList) {
+    burger.addEventListener("click", function () {
+      navList.classList.toggle("open");
+      burger.classList.toggle("open"); // Ajoute cette ligne
+    });
+
+    navList.querySelectorAll("a, button, li").forEach((el) => {
+      el.addEventListener("click", () => {
+        navList.classList.remove("open");
+        burger.classList.remove("open"); // Ajoute cette ligne
+      });
+    });
+  }
+
+  document.querySelectorAll(".nav-list li a").forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      let li = item.closest("li");
+      let star = li.querySelector(".star_2");
+      if (star) {
+        star.style.animation = "none";
+        void star.offsetWidth;
+        star.style.animation = "spin 1s cubic-bezier(0.36, 0, 0.64, 1) 1";
+      }
+    });
+
+    item.addEventListener("mouseleave", () => {
+      let li = item.closest("li");
+      let star = li.querySelector(".star_2");
+      if (star) {
+        star.style.animation = "none";
+      }
+    });
+  });
+}
+
+// Animation à l'accueil
+function indexAnimations() {
   gsap.from(".arrow_star", {
     duration: 2.8,
     opacity: 0,
@@ -93,45 +135,6 @@ function baseAnimations() {
       },
     });
   }
-
-  // Animation des liens de navigation
-  // Menu burger mobile
-  const burger = document.querySelector(".burger");
-  const navList = document.querySelector(".nav-list");
-
-  if (burger && navList) {
-    burger.addEventListener("click", function () {
-      navList.classList.toggle("open");
-      burger.classList.toggle("open"); // Ajoute cette ligne
-    });
-
-    navList.querySelectorAll("a, button, li").forEach((el) => {
-      el.addEventListener("click", () => {
-        navList.classList.remove("open");
-        burger.classList.remove("open"); // Ajoute cette ligne
-      });
-    });
-  }
-
-  document.querySelectorAll(".nav-list li a").forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-      let li = item.closest("li");
-      let star = li.querySelector(".star_2");
-      if (star) {
-        star.style.animation = "none";
-        void star.offsetWidth;
-        star.style.animation = "spin 1s cubic-bezier(0.36, 0, 0.64, 1) 1";
-      }
-    });
-
-    item.addEventListener("mouseleave", () => {
-      let li = item.closest("li");
-      let star = li.querySelector(".star_2");
-      if (star) {
-        star.style.animation = "none";
-      }
-    });
-  });
 }
 
 // Animation spécifique pour la page Contact
@@ -486,6 +489,8 @@ function contentAnimation() {
 
   if (window.location.pathname.includes("projets")) {
     projetsAnimations();
+  } else if (window.location.pathname.includes("/index")) {
+    indexAnimations();
   } else if (window.location.pathname.includes("/projet/")) {
     projetAnimations();
   } else if (window.location.pathname.includes("propos")) {

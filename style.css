@@ -721,7 +721,7 @@ body.propos {
 }
 
 /* Bloc de texte */
-body.propos .hero-copy {
+body.propos {
   position: absolute;
   top: 50%;
   left: 50%;
