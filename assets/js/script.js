@@ -385,6 +385,12 @@ function proposAnimations() {
   let currentX = 0,
     currentY = 0;
 
+  if (heroCopy) {
+    heroCopy.style.left = "50%";
+    heroCopy.style.top = "50%";
+    heroCopy.style.transform = "translate(-50%, -50%)";
+  }
+
   const updateGallery = (mouseX, mouseY, show = true) => {
     targetX = mouseX - container.getBoundingClientRect().left;
     targetY = mouseY - container.getBoundingClientRect().top;
