@@ -79,6 +79,7 @@ function baseAnimations() {
 
 // Animation à l'accueil
 function indexAnimations() {
+  // Animation flèche du bas
   gsap.from(".arrow_star", {
     duration: 2.8,
     opacity: 0,
@@ -140,7 +141,6 @@ function indexAnimations() {
 // Animation spécifique pour la page Contact
 function contactAnimations() {
   if (!document.querySelector(".container-contact")) return;
-
   gsap.registerPlugin(ScrollTrigger);
   // Animation des lignes de texte
   gsap.from(".line h1", {
@@ -388,12 +388,6 @@ function proposAnimations() {
   let currentX = 0,
     currentY = 0;
 
-  if (heroCopy) {
-    heroCopy.style.left = "50%";
-    heroCopy.style.top = "50%";
-    heroCopy.style.transform = "translate(-50%, -50%)";
-  }
-
   const updateGallery = (mouseX, mouseY, show = true) => {
     targetX = mouseX - container.getBoundingClientRect().left;
     targetY = mouseY - container.getBoundingClientRect().top;
@@ -489,7 +483,11 @@ function contentAnimation() {
 
   if (window.location.pathname.includes("projets")) {
     projetsAnimations();
-  } else if (window.location.pathname.includes("/index")) {
+  } else if (
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/mariama.studio/"
+  ) {
     indexAnimations();
   } else if (window.location.pathname.includes("/projet/")) {
     projetAnimations();
