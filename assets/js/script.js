@@ -208,6 +208,7 @@ function contactAnimations() {
   });
 }
 
+// -------------------------------------------------------------------------------------------------
 // Animation spécifique pour les pages Projet individuel
 function projetAnimations() {
   if (!document.querySelector(".container-present")) return;
@@ -274,6 +275,7 @@ function projetAnimations() {
   });
 }
 
+// -------------------------------------------------------------------------------------------------
 // Animation spécifique pour la page projets
 function projetsAnimations() {
   if (!document.querySelector(".sticky")) return;
