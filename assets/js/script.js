@@ -77,6 +77,7 @@ function baseAnimations() {
   });
 }
 
+// -------------------------------------------------------------------------------------------------
 // Animation à l'accueil
 function indexAnimations() {
   // Animation flèche du bas
@@ -138,6 +139,7 @@ function indexAnimations() {
   }
 }
 
+// -------------------------------------------------------------------------------------------------
 // Animation spécifique pour la page Contact
 function contactAnimations() {
   if (!document.querySelector(".container-contact")) return;
@@ -479,6 +481,7 @@ function proposAnimations() {
   });
 }
 
+// -------------------------------------------------------------------------------------------------
 // Initialisation pour chaque page
 function contentAnimation() {
   baseAnimations();
