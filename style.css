@@ -257,7 +257,8 @@ a:hover {
   font-style: italic;
 }
 
-.custom-font-italic {
+.custom-font-italic,
+.custom-font-italic- {
   font-family: "felixtowe", Georgia, "Times New Roman", Times, serif;
   font-style: italic;
 }

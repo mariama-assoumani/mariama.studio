@@ -34,7 +34,7 @@ Runner.run(runner, engine);
 const stickers = [];
 for (let i = 1; i <= 14; i++) {
   const img = new Image();
-  img.src = `assets/images/stickers/sticker_${i}.png`;
+  img.src = `../assets/images/stickers/sticker_${i}.png`;
   stickers.push(img);
 }
 

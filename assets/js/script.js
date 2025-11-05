@@ -137,6 +137,22 @@ function indexAnimations() {
       },
     });
   }
+
+  if (document.querySelector(".custom-font-italic-")) {
+    new Typed(".custom-font-italic-", {
+      strings: ["experiences.", "interfaces.", "meaning."],
+      typeSpeed: 40,
+      backSpeed: 40,
+      loop: true,
+      onComplete: (self) => {
+        loopCounter++;
+        if (loopCounter >= maxLoops) {
+          self.stop();
+          document.querySelector(".typed-cursor").style.display = "none";
+        }
+      },
+    });
+  }
 }
 
 // -------------------------------------------------------------------------------------------------
