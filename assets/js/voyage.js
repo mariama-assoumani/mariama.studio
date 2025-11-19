@@ -45,11 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
   quitButton.addEventListener("click", function (e) {
     e.stopPropagation();
 
-    // Détecte si on est dans le dossier 'en'
     const isEnglish = window.location.pathname.includes("/en/");
 
-    // Définit la page cible selon la langue
-    const targetPage = isEnglish ? "propos.html" : "en/propos.html";
+    const targetPage = isEnglish ? "/en/propos.html" : "/propos.html";
 
     setTimeout(() => {
       window.location.href = targetPage;

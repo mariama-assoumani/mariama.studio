@@ -305,11 +305,45 @@ a:hover {
   gap: 50px;
 }
 
+.incitations {
+  z-index: 99999;
+}
+
 .mariama {
   width: 300px;
   height: auto;
-  z-index: 9999999999999999;
   border-radius: 2px;
+  transition: transform 0.4s cubic-bezier(0.36, 0, 0.64, 1);
+}
+
+/* Rotations initiales */
+.deg10 {
+  transform: rotate(-5deg);
+}
+
+.deg5 {
+  transform: rotate(5deg);
+}
+
+.deg10:hover {
+  transform: rotate(-3deg) scale(1.03);
+}
+
+.deg5:hover {
+  transform: rotate(3deg) scale(1.03);
+}
+
+.incitation {
+  width: auto;
+  height: 100px;
+}
+
+.ipropos {
+  margin: 0 0 200px 30px;
+}
+
+.iprojet {
+  margin: 0px 30px 200px 0;
 }
 
 /* Réseaux sociaux */

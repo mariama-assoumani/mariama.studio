@@ -104,8 +104,22 @@ function indexAnimations() {
     },
   });
 
-  // Animation des icônes sociales
-  gsap.from(".social-icons", {
+  // Animation images
+  gsap.from(".mariama", {
+    duration: 1,
+    opacity: 0,
+    delay: 1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".introduction", // ou la section contenant l’intro
+      start: "top 70%", // adapte selon l’effet voulu
+      toggleActions: "play none none none",
+      markers: false,
+    },
+  });
+
+  // Animation des icônes sociales et incitation
+  gsap.from(".social-icons, .incitation", {
     duration: 1.8,
     opacity: 0,
     delay: 2,
