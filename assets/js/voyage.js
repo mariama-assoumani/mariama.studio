@@ -45,9 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
   quitButton.addEventListener("click", function (e) {
     e.stopPropagation();
 
-    const isEnglish = window.location.pathname.includes("/en/");
+    const base = "/mariama.studio"; // ton dossier GitHub Pages
 
-    const targetPage = isEnglish ? "/en/propos.html" : "/propos.html";
+    const isEnglish = window.location.pathname.includes("/en/");
+    const targetPage = isEnglish
+      ? `${base}/en/propos.html`
+      : `${base}/propos.html`;
 
     setTimeout(() => {
       window.location.href = targetPage;
