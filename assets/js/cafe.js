@@ -32,9 +32,11 @@ Runner.run(runner, engine);
 
 // Charger tes images
 const stickers = [];
+const basePath = window.location.pathname.includes("/en/") ? "../" : "./";
+
 for (let i = 1; i <= 14; i++) {
   const img = new Image();
-  img.src = `../assets/images/stickers/sticker_${i}.png`;
+  img.src = `${basePath}assets/images/stickers/sticker_${i}.png`;
   stickers.push(img);
 }
 
