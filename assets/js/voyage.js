@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   quitButton.addEventListener("click", function (e) {
     e.stopPropagation();
 
-    const base = "/mariama.studio"; // ton dossier GitHub Pages
+    const base = "/mariama.studio";
 
     const isEnglish = window.location.pathname.includes("/en/");
     const targetPage = isEnglish
