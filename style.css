@@ -415,7 +415,15 @@ a:hover {
 /* Version mobile */
 @media (max-width: 940px) {
   #details h1 {
-    font-size: 25px;
+    font-size: 50px;
+  }
+
+  .mariama {
+    width: 200px;
+  }
+
+  .incitation {
+    height: 50px;
   }
 
   .burger {
@@ -469,6 +477,28 @@ a:hover {
     align-items: center;
     padding: 10px 15px;
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 667px) {
+  #details h1 {
+    font-size: 25px;
+  }
+
+  .mariama {
+    width: 120px;
+  }
+
+  .incitation {
+    height: 30px;
+  }
+
+  .ipropos {
+    margin: 0 0 100px 30px;
+  }
+
+  .iprojet {
+    margin: 0px 30px 100px 0;
   }
 }
 
